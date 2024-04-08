@@ -3,10 +3,10 @@ import { Link } from 'react-router-dom'
 import '../Style/landing.css'; 
 // Your React components and other JavaScript code go here
 function landing() {
-  const handleSubmit = () => {
-  //   // Redirect to the next page
-    window.location.href = '/Bill.js';
-  };
+  // const handleSubmit = () => {
+  // //   // Redirect to the next page
+  //   window.location.href = '/Bill.js';
+  // };
   return (
     <div className='land'>
       <div className='title'>
