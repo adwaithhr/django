@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Extract Text from Image</title>
+</head>
+<body>
+    <h1>Extract Text from Image</h1>
+    <form method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        <label for="image">Select an image:</label>
+        <input type="file" name="image" id="image" accept="image/*">
+        <br>
+        <button type="submit">Extract Text</button>
+    </form>
+    {% if extracted_text %}
+        <p>Extracted Text:</p>
+        <pre id="extracted_text_pre">{{ extracted_text }}</pre>
+    {% elif is_valid == False %}
+        <p style="color: red;">{{ validation_message }}</p>
+    {% endif %}
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="your_bill.js"></script>
+    <script>
+        $(document).ready(function() {
+            const extractedText = $("#extracted_text_pre").text().trim();
+            processBill(extractedText);  // Pass the extracted text to bill.js
+        });
+    </script>
+</body>
+</html>

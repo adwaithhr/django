@@ -1,0 +1,67 @@
+/* Style for the form */
+.form-container {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: row;
+    width: 900px;
+    height: 40px;
+  }
+  
+  .form-container-input {
+    margin-right: 10px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .form-container button {
+    padding: 6px 12px;
+    background-color: #332d78;
+    color: #ece7eb;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .form-container button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Style for the table container */
+  .table-container { 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow-x: auto;
+  }
+  
+  /* Style for the table */
+  .table {
+    margin-top: 20vh;
+    margin-left: -98px;
+    width: 800px;
+    border-collapse: collapse;
+  }
+  
+  /* Style for table header */
+  .table th {
+    background-color: #f3d4ee;
+    color: #332d78;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding: 8px;
+    text-align: left;
+    border: 1px solid #5d5b5b;
+  }
+  
+  /* Style for table rows */
+  .table tr {
+    border: 1px solid #292728;
+  }
+  
+  /* Style for table cells */
+  .table td {
+    padding: 8px;
+    border: 1px solid #252525;
+  }
+  
