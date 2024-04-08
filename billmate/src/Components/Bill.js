@@ -17,7 +17,7 @@ function Bill() {
   const handleSubmit = (e) => {
     e.preventDefault();
     // Add new row to tableData state
-    setTableData([...tableData, { id, name, age, count}]);
+    setTableData([...tableData, { id, name, age, count, total: Number(count)*Number(age)}]);
     // Clear input fields
     setId('');
     setName('');
@@ -33,10 +33,11 @@ function Bill() {
       <table className="table">
         <thead>
           <tr>
-            <th>Expense</th>
+            <th>Item</th>
             <th>Type</th>
             <th>Amount</th>
             <th>Count</th>
+            <th>Cost</th>
           </tr>
         </thead>
         <tbody>
@@ -46,6 +47,7 @@ function Bill() {
               <td>{row.name}</td>
               <td>{row.age}</td>
               <td>{row.count}</td>
+              <td>{row.total}</td>
             </tr>
           ))}
         </tbody>
@@ -53,15 +55,16 @@ function Bill() {
 
 
       <form className='form-container' onSubmit={handleSubmit}>
-        <input className="form-container-input"  type="text" value={id} onChange={(e) => setId(e.target.value)} placeholder="Expense" />
+        <input className="form-container-input"  type="text" value={id} onChange={(e) => setId(e.target.value)} placeholder="Item" />
         <input className="form-container-input"  type="text" value={name} onChange={(e) => setName(e.target.value)} placeholder="Type" />
         <input className="form-container-input"  type="text" value={age} onChange={(e) => setAge(e.target.value)} placeholder="Amount" />
         <input className="form-container-input"  type="text" value={count} onChange={(e) => setCount(e.target.value)} placeholder="Count" />
+        
 
         <button type="submit">Add Row</button>
       </form>
       
-    </div>
+    </div> 
     
   );
 }
